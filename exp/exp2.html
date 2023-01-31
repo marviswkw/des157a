@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JavaScript Experimentation</title>
+	</head>
+
+	<body>
+		<h1>JS Experiment 2</h1>
+		<div id="heading">
+			<h2>Please open the console to view the functionality of the code.</h2>
+		</div>
+		<script>
+			var colors = prompt(
+				"Hello there! Please pick a color of the rainbow",
+				""
+			).toLowerCase();
+			var selectedColor = [
+				"red",
+				"orange",
+				"yellow",
+				"green",
+				"blue",
+				"indigo",
+				"purple",
+			];
+
+			function randomInt(min, max) {
+				return Math.floor((max - min + 1) * Math.random()) + min;
+			}
+
+			var heading = document.getElementById(`heading`);
+
+			while (true) {
+				if (colors === selectedColor[randomInt(0, 6)]) {
+					heading.innerHTML = "<h2>You've got it right!</h2>";
+					break;
+				} else {
+					prompt("Try Again!");
+				}
+			}
+		</script>
+	</body>
+</html>
