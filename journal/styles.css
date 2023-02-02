@@ -1,0 +1,159 @@
+body{
+    margin:auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    background-color: rgb(255, 252, 238);
+    margin: 30px;
+    background-image:url(images/01.png);
+    background-size: 30% ;
+    background-repeat: no-repeat;
+    background-position: 26% 40%;
+}
+
+header{
+    border: 0;
+    border-bottom: 1px;
+    border-style: solid;
+    /* border-color: blue; */
+    margin: 0px 30px;
+}
+
+
+
+header h1{
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    margin:0px;
+    margin-bottom: -25px;
+    justify-content: flex-start;
+    font-size: 50px;
+    color:blue;
+}
+
+header nav ul{
+    list-style-type: none;
+    margin: auto;
+    display:flex;
+    justify-content: flex-end;
+    padding: 5px 0px;
+    
+    
+    
+}
+
+header nav ul li{
+    padding-left: 80px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-size:16px;
+    padding: 0px 5px;
+
+    color:black;
+    border: 0;
+    border-left: 5px;
+    border-right: 15px;
+    border-style: solid;
+    border-color: blue;
+    letter-spacing: 2px;
+}
+
+article{
+    display:grid;
+    grid-row: 1;
+    grid-template-columns: 1.5fr 1.5fr;
+    margin:30px;
+    padding-top:20px;
+}
+
+.info {
+    margin:auto;
+}
+
+.info h2{
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+    margin: 10px 0px;
+}
+
+.info h3{
+    margin:auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.info h3 a{
+    text-decoration: none;
+    color:blue;
+}
+
+.info time{
+    display: flex;
+    font-weight: 100;
+    justify-content:flex-end;
+    padding: 40px 0px;
+}
+
+section p{
+    line-height: 1.2em;
+    padding:5px;
+    font-size: 12;
+}
+
+section p a{
+    text-decoration: none;
+    color:rgb(152, 152, 152);
+}
+
+ .postnav ul{
+    display:flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    padding-right: 30px;
+    
+}
+
+.postnav ul li{
+    padding-left:80px;
+}
+
+ .postnav ul li a{
+    text-decoration: none;
+    color:blue;
+}
+
+footer{
+    margin:auto;
+    text-align:center;
+    padding:30px;
+    width: 40%;
+}
+
+footer p{
+    border: 0;
+    border-left: 20px;
+    border-right: 75px;
+    border-style: solid;
+    border-color: blue;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    
+}
+
+footer p a{
+    text-decoration: none;
+    color:rgb(255, 94, 0);
+}
+
+a:hover{
+    color:rgb(255, 94, 0);
+    border-color: rgb(255, 94, 0);
+}
+
+.postnav a:hover{
+    color:rgb(255, 94, 0);
+    border-color: rgb(255, 94, 0);
+}
+
