@@ -1,13 +1,15 @@
 body{
-    margin:auto;
+    margin: auto;
+    padding: 20px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
     background-color: rgb(255, 252, 238);
-    margin: 30px;
     background-image:url(images/01.png);
     background-size: 30% ;
     background-repeat: no-repeat;
     background-position: 26% 40%;
+    max-width: 1200px;
+    max-height: 750px;
 }
 
 header{
