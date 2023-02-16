@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--normalize css-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <!--google fonts link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arapey&family=Montserrat:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <!--my styles-->
+    <link href="styles.css" rel="stylesheet">
+
+    <!--js-->
+    <script src="script.js" defer></script>
+
+    <title>Coffee Shop Gacha</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>COFFEE<br>SHOP<br>GACHA</h1>
+    </header>
+    <div class="coffee"><img src="images/coffee.png">
+    </div>
+    <main>
+        <section class="formInput">
+            <article>
+                <h2>Having trouble deciding your cafe or study spot today? <br>Let COFFEE SHOP GA-CHA pick one for you.</h2>
+            </article>
+            <form>
+                <div class="inputbox">
+                    <label for="atmosphere">Shop Atmosphere</label>
+                    <select id="atmosphere">
+                        <option value="  "></option>
+                        <option value="Quiet">Quiet</option>
+                        <option value="Cozy">Cozy</option>
+                        <option value="Busy">Busy</option>
+                        <option value="Upbeat">Upbeat</option>
+                    </select>
+                </div>
+
+                <div class="inputbox">
+                    <label>Favorite Coffee Beverage</label>
+                    <input type="text" id="beverages" placeholder="latte" required>
+                </div>
+
+                <div class="inputbox">
+                    <label>How are you feeling today?</label>
+                    <input type="text" id="mood" placeholder="happy" required>
+                </div>
+
+                <div class="inputbox">
+                    <fieldset>
+                        <label for="price">Price Range</label>
+                        <div class="radiostyle" id="priceOptions">
+                            <input type="radio" name="price" id="price1" value="$">
+                            <label for="price1">$</label>
+
+                            <input type="radio" name="price" id="price2" value="$$">
+                            <label for="price2">$$</label>
+
+                            <input type="radio" name="price" id="price3" value="$$$">
+                            <label for="price3">$$$</label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="inputbox">
+                    <label>When will be your coffee time?</label>
+                    <input type="text" id="time" placeholder="11am/ afternoon" required>
+                </div>
+
+                <input type="submit" id="submitBtn" value="Generate">
+
+            </form>
+        </section>
+    </main>
+
+
+    <section id="formOutput" class="hidden">
+        <article>
+            <h2>(TEMPLE)</h2>
+            <div class="outputImg"><img src="images/temple1.png"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, nostrum error reprehenderit, eaque eos laboriosam incidunt odit obcaecati natus veritatis dolore dignissimos voluptatem rem nihil quod iure quis? Tenetur, asperiores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum tempore dolores minima debitis reprehenderit adipisci perspiciatis quae velit, in necessitatibus molestias accusantium. Enim, facilis debitis soluta dolor accusantium animi et!</p>
+        </article>
+        <button class="close">Close</button>
+    </section>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(243,177,177);
+    background: linear-gradient(126deg, rgba(243,177,177,0.8) 0%, rgba(146,90,5,0.80) 100%);
+    background-size: 120%;
+}
+
+header{
+    font-family: 'Arapey', serif;
+    font-size: 25px; 
+    background: rgb(55,35,2);
+    background: linear-gradient(180deg, rgba(115,27,43,0.76) 0%, rgba(167,63,40,0.81) 100%);
+    z-index: -2;
+
+}
+
+header h1 {
+    color:beige;
+    text-align:center;
+    margin: auto;
+    padding: 50px;
+    font-weight: lighter;
+}
+
+.coffee{
+    z-index: -1;
+}
+
+.coffee img {
+    display: block;
+    margin: auto;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    width: 60%;
+    align-items: center;
+
+}
+
+main article h2{
+    font-size: 16px;
+    color:white;
+    padding:10px;
+    line-height: 1.3em;
+}
+
+main{
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.formInput {
+    display: block;
+    width: 80%;
+    align-items: center;
+    border-style: none;
+    margin:auto;
+    /* border-color: beige;
+    border-width: 1px; */
+    border-radius: 28px;
+    background-color: rgb(255,255,255,0.4);
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    
+}
+
+label {
+    display:block;
+    padding: 10px 0px;
+    margin:auto;
+    text-align: center;
+    z-index:5;
+}
+
+select{
+    width:100%;
+    padding:8px 0px;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: white;
+    z-index:5;
+}
+
+.radiostyle{
+    display: flex;
+}
+.radiostyle label{
+    margin: auto;
+    margin-top: 15px;
+    display: block;
+    padding:8px 0px;
+    background-color: rgb(255,255,255,0.4);
+    border: 1px solid;
+    border-color: white;
+    border-radius: 10px;
+    padding: 5px 25px;
+    cursor: pointer;
+    
+}
+
+
+.radiostyle [type="radio"]{
+    display:none;
+}
+
+.radioSelected{ 
+    color: rgba(167,63,40,0.81);
+    font-weight: bold; 
+    border:1px solid;
+    border-color: rgba(167,63,40,0.81);
+}
+
+
+fieldset{
+    margin: auto;
+    border: none;
+    padding: none;
+}
+
+fieldset p {
+    margin:auto;
+    text-align: center;
+}
+
+input{
+    display:flex;
+    width: 100%;
+    padding:8px 10px;
+    background-color: white;
+    border: 1px solid;
+    border-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type=text]{
+width:95%;
+margin: auto;
+}
+
+input[type="text"]:focus {
+    border:1px solid #dcd9d6;
+    outline: 0;
+    box-shadow: 0 4px 6px 0 rgba(115,27,43,0.4), 0 6px 10px 0 rgba(167,63,40,0.4);
+}
+
+select:focus{
+    border:1px solid rgba(115,27,43,0.4);
+    outline: 0;
+    box-shadow: 0 4px 6px 0 rgba(115,27,43,0.4), 0 6px 10px 0 rgba(167,63,40,0.4);
+}
+
+
+#submitBtn{
+    margin:auto;
+    margin-top:30px;
+    width: 200px;
+}
+
+input[type=submit]{
+    border:0 none;
+    justify-content: center;
+    background-color:rgba(220, 165, 84, 0.81);
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+    border: 1px solid white;
+    color:white;
+}
+
+input[type=submit]:hover{
+    background-color: rgba(167,63,40,0.81);
+}
+
+#formOutput{
+position: absolute;
+background-color: burlywood;
+top:0;
+left:0;
+width:100vw;
+height:100vh;
+transition-property: opacity, visibility;
+transition-duration: 1s;
+transition-timing-function: ease;
+}
+
+/* .hidden {
+    visibility: hidden;
+    opacity:0;
+}
+
+.showing{
+    visibility: visible;
+    opacity: 1;
+} */
+
+
+.outputImg img{
+    display: block;
+    margin: auto;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    width: 80%;
+    align-items: center;
+}
+
+#formOutput{
+    margin:auto;
+}
+
+
+/* media */
+@media only screen and (min-width: 700px){
+    body{
+        margin:auto;
+        display: grid;
+        grid-template-columns: 0.5fr 2.5fr;
+        height: 100%;
+        /* min-height: 750px; */
+    }
+
+    header{
+        display: flex;
+    }
+
+    header h1{
+        text-align: left;
+        justify-content: flex-start;
+        margin:0;
+        padding:20px 100px 0px 20px;
+
+    }
+
+    .container{
+       height: 1200; 
+    }
+
+    .coffee img{
+        margin:0;
+        max-width: 750px;
+    }
+
+    .coffee{
+        margin:0;
+        position:absolute;
+        top:25%;
+        left:2%;
+        
+    }
+
+    .formInput{
+        width:50%;
+        /* margin-top:10vh;
+        margin-bottom:10vh; */
+        margin:10vh 20vw;
+    }
+
+    article h2{
+        display:block;
+    }
+
+    main{
+        margin:20px;
+    }
+
+    main form{
+        padding: 10px 10px;
+    }
+
+    label{
+        text-align: left;
+    }
+
+    .inputbox{
+        z-index:1;
+        width:90%;
+        margin:auto;
+    }
+
+
+
+}
