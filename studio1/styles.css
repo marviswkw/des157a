@@ -78,7 +78,7 @@ select{
     background-color: white;
     border: 1px solid;
     border-radius: 10px;
-    border-color: white;
+    border-color: rgb(212, 212, 212);
     z-index:5;
 }
 
@@ -115,7 +115,6 @@ select{
 fieldset{
     margin: auto;
     border: none;
-    padding: none;
 }
 
 fieldset p {
@@ -129,7 +128,7 @@ input{
     padding:8px 10px;
     background-color: white;
     border: 1px solid;
-    border-color: white;
+    border-color:rgb(212, 212, 212);;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -183,7 +182,7 @@ transition-timing-function: ease;
 
 }
 
-/* .hidden {
+.hidden {
     visibility: hidden;
     opacity:0;
 }
@@ -191,7 +190,7 @@ transition-timing-function: ease;
 .showing{
     visibility: visible;
     opacity: 1;
-} */
+}
 
 
 #formOutput p{
@@ -265,10 +264,6 @@ transition-timing-function: ease;
         margin:0;
         padding:20px 100px 0px 20px;
 
-    }
-
-    .container{
-       height: 1200; 
     }
 
     .coffee img{
