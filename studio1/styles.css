@@ -24,6 +24,20 @@ header h1 {
 
 .coffee{
     z-index: -1;
+    animation: animation1 2s ease-in-out;
+}
+
+@keyframes animation1 {
+    0% {
+        transform: rotate(10deg);
+        opacity: 0.1;
+    }
+
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
 }
 
 .coffee img {
@@ -31,7 +45,7 @@ header h1 {
     margin: auto;
     margin-top: 20px; 
     margin-bottom: 20px; 
-    width: 70%;
+    width: 75%;
     align-items: center;
 
 }
@@ -64,6 +78,11 @@ main{
     
 }
 
+.coloredText{
+    color: rgb(230, 176, 58);
+    font-weight: bold;
+}
+
 label {
     display:block;
     padding: 10px 0px;
@@ -82,10 +101,8 @@ select{
     z-index:5;
 }
 
-.radiostyle{
-    display: flex;
-}
-.radiostyle label{
+
+/* .radiostyle label{
     margin: auto;
     margin-top: 15px;
     display: block;
@@ -97,11 +114,14 @@ select{
     padding: 5px 25px;
     cursor: pointer;
     
-}
+} */
 
 
-.radiostyle [type="radio"]{
-    display:none;
+.radiostyle [type="radio"]:after{
+   position:relative;
+   width: 5px;
+   height: 5px;
+   border-radius: 15px;
 }
 
 .radioSelected{ 
@@ -182,6 +202,7 @@ transition-timing-function: ease;
 
 }
 
+
 .hidden {
     visibility: hidden;
     opacity:0;
@@ -234,6 +255,7 @@ transition-timing-function: ease;
 #formOutput .close{
     display: flex;
     margin: auto;
+    margin-bottom: 20px;
     justify-content: center;
     background-color:rgba(220, 165, 84, 0.81);
     font-weight: bold;
@@ -242,6 +264,11 @@ transition-timing-function: ease;
     padding:5px 25px;
     border-radius: 15px;
 }
+
+#formOutput .close:hover{
+        background-color: rgba(167,63,40,0.81);
+    }
+
 
 
 /* media */
@@ -292,7 +319,6 @@ transition-timing-function: ease;
 
     main{
         margin: auto;
-        margin-top:10vh;
         margin-bottom: 10vh;
     }
 
@@ -335,7 +361,7 @@ transition-timing-function: ease;
 
     #formOutput article{
         width:50vw;
-        height: 90vh;
+        height: 80vh;
         box-sizing: border-box;
         background-color: rgb(77, 103, 120);
         transform :translate(-50%,-50%);
@@ -354,6 +380,10 @@ transition-timing-function: ease;
         padding-left: 20px;
         text-align: left;
 
+    }
+
+    #formOutput p{
+        margin: 20px 30px;
     }
 
 }

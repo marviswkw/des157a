@@ -35,12 +35,12 @@
             <form>
                 <div class="inputbox">
                     <label for="atmosphere">Shop Atmosphere</label>
-                    <select id="atmosphere">
+                    <select id="atmosphere" required>
                         <option value="---">-Please choose an option-</option>
-                        <option value="Quiet">Quiet</option>
-                        <option value="Cozy">Cozy</option>
-                        <option value="Busy">Busy</option>
-                        <option value="Upbeat">Upbeat</option>
+                        <option value="quiet">quiet</option>
+                        <option value="cozy">cozy</option>
+                        <option value="busy">busy</option>
+                        <option value="upbeat">upbeat</option>
                     </select>
                 </div>
 
@@ -54,21 +54,17 @@
                     <input type="text" id="mood" placeholder="happy" required>
                 </div>
 
-                <!-- <div class="inputbox">
-                    <fieldset>
-                        <label for="price">Price Range</label>
-                        <div class="radiostyle" id="priceOptions">
-                            <input type="radio" name="price" id="price1" value="$">
-                            <label for="price1">$</label>
+                <div class="inputbox">
+                    <label for="food">You wanna grab some...</label>
+                    <select id="food" required>
+                        <option value="---">-Please choose an option-</option>
+                        <option value="foods">foods</option>
+                        <option value="drinks">drinks</option>
+                        <option value="both foods and drinks">both foods and drinks</option>
+                    </select>
+                </div>
 
-                            <input type="radio" name="price" id="price2" value="$$">
-                            <label for="price2">$$</label>
 
-                            <input type="radio" name="price" id="price3" value="$$$">
-                            <label for="price3">$$$</label>
-                        </div>
-                    </fieldset>
-                </div> -->
 
                 <div class="inputbox">
                     <label>When will be your coffee time?</label>
@@ -85,9 +81,9 @@
     <section id="formOutput" class="hidden">
         <article class="outputArticle">
             <h2>(COFFEE SHOP NAME)</h2>
-            <div class="outputImg"><img src="images/temple1.png" alt="coffee shop"></div>
+            <div class="outputImg"><img id="shopImage" src="images/temple1.png" alt="coffee shop"></div>
         
-            <p id="result">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, nostrum error reprehenderit, eaque eos laboriosam incidunt odit obcaecati natus veritatis dolore dignissimos voluptatem rem nihil quod iure quis? Tenetur, asperiores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum tempore dolores minima debitis reprehenderit adipisci perspiciatis quae velit, in necessitatibus molestias accusantium. Enim, facilis debitis soluta dolor accusantium animi et!</p>
+            <p id="result"></p>
 
             <button class="close">Close</button>
 

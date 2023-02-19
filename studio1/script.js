@@ -3,52 +3,60 @@
     'use strict';
     console.log('reading js');
 
-    //setting the variables to the checked values
-    let selectedPrice = '';
     const form = document.querySelector('form');
-
-    //querySelectorAll returns all matches into an HTML Collection
-    const priceButtons = document.querySelectorAll('#priceOptions input[type="radio"]');
-
-     //traverse the priceButtons collection to attach a click event to each one
-     for (let i = 0; i < priceButtons.length; i++) {
-        // console.log(priceButtons[i]);
-        priceButtons[i].addEventListener('click', function(){
-            // remove all classes from each priceButton
-            for (let i = 0; i < priceButtons.length; i++) {
-                console.log(priceButtons[i].nextElementSibling);
-                const classes = priceButtons[i].nextElementSibling.classList;
-                classes.remove('radioSelected');
-            }
-            //the keyword this means which radio button called this function
-            selectedPrice = this.getAttribute('value');
-            const selectedElement = this.nextElementSibling.className='radioSelected';
-            console.log(`price selected: ${selectedPrice}`);
-            console.log(selectedElement);
-
-        });
-    }
-
-    // define functions
-    function whichPrice() {
-    }
-
-    const sections = document.querySelectorAll('section');
-
-    form.addEventListener('submit', function(evt){
-        //stop the page from reloading
-        evt.preventDefault();
-
-    });
 
     form.addEventListener('submit',function(event){
        event.preventDefault();
        document.getElementById('formOutput').className = 'showing';
+       console.log('show hidden');
     });
+
+    form.addEventListener('submit',function(event){
+    const result = document.getElementById('result');
+    const beverages = document.getElementById('beverages').value;
+    const time = document.getElementById('time').value;
+    const mood = document.getElementById('mood').value;
+    const atmosphere = document.getElementById('atmosphere').value;
+    const food = document.getElementById('food').value;
+
+    result.innerHTML = (`Wanna stay in a <span class="coloredText"> ${atmosphere} </span> coffee shop in Davis? This one is a perfect match for you. It is open at <span class="coloredText"> ${time}</span>, Monday through Sunday. It is a great study spot, chill and chat place after work or school. It has fantastic <span class="coloredText">${food}</span>. Craving for your favorite <span class="coloredText">${beverages}</span>? No problem! Here always has the best one for you on your <span class="coloredText">${mood}</span> day.`);
+
+    const shopName = document.querySelector('#formOutput h2');
+    console.log(shopName);
+    const atmosphereOptions = document.getElementById("atmosphere");
+    const atmosphereValue = atmosphereOptions.value;
+    const foodOptions = document.getElementById("food");
+    const foodValue = foodOptions.value;
+    const shopImg = document.querySelector('#formOutput div');
+
+    if(atmosphereValue === "quiet"){
+        shopName.innerHTML = ('- PARCHAMAMA -');
+        shopImg.innerHTML = (`<img id="shopImage" src="images/pachamama1.png" alt="coffee shop">`);
+        
+        console.log(shopImg);
+    }
+
+    if(atmosphereValue === "cozy"){
+        shopName.innerHTML = ('- TEMPLE -');
+    }
+
+    if(atmosphereValue === "upbeat"){
+        shopName.innerHTML = ('- PHILZ -');
+        shopImg.innerHTML = (`<img id="shopImage" src="images/philz1.png" alt="coffee shop">`);}
+
+     if(atmosphereValue === "busy"){
+        shopName.innerHTML = ('- STARBUCKS -');
+        shopImg.innerHTML = (`<img id="shopImage" src="images/starbuck3.png" alt="coffee shop">`);    
+     }
+
+    });
+
 
     document.querySelector('.close').addEventListener('click',function(event){
         event.preventDefault();
         document.getElementById('formOutput').className ='hidden';
+
     });
+
 
 }());
