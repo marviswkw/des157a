@@ -105,7 +105,6 @@ header{
     border-radius: 30px;
     background-color: rgb(8, 65, 122);
     
-
 }
 
 
@@ -179,6 +178,7 @@ main{
 .overlayContent{
     width:40%;
     padding: 20px;
+    left:65%;
 }
 
 .closeBtn{
@@ -186,4 +186,37 @@ main{
     display: flex;
 }
 
+header{
+    margin:0;
+    left: 0;
+    font-size: 0.8em;
+    text-align: center;
+    width:39%;
+    color:rgb(8, 65, 122);
+}
+
+
+.timelineList{
+    position: absolute;
+    margin: 0;
+    left: 0;
+    width:40%;
+}
+
+.timelineSection{
+    padding:10% 0%;
+}
+
+.tlimage1, .tlimage2, .tlimage3, .tlimage4, .tlimage5 {
+    width:60%;
+}
+
+.tlimage1:hover,.tlimage2:hover,.tlimage3:hover,.tlimage4:hover,.tlimage5:hover{
+    width:68%;
+   
+}
+
+.overlay{
+
+}
 }
