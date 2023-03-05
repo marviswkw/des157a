@@ -1,0 +1,189 @@
+body{
+    font-family: 'Rock Salt', cursive;
+    margin:auto;
+    background-color: rgb(227, 184, 42);
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+main{
+    margin: auto;
+    min-height: 100vh;
+}
+
+header{
+    margin:10% auto 0% auto;
+    font-size: 0.8em;
+    text-align: center;
+    color:rgb(8, 65, 122);
+}
+
+.timelineList{
+    position:relative;
+    margin:auto;
+    margin-bottom: 10%;
+    padding:0;
+    text-align: center;
+    list-style: none;
+    width:80%;
+}
+
+.timelineList:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: rgb(8, 65, 122);
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+.timelineSection{
+    display: block;
+    padding:10%;
+}
+
+.tlimage1, .tlimage2, .tlimage3, .tlimage4, .tlimage5 {
+    width:40%;
+    border-radius: 50%;
+    border-style: none;
+    border-width: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.tlimage1:hover,.tlimage2:hover,.tlimage3:hover,.tlimage4:hover,.tlimage5:hover{
+    border-style: solid;
+    border-color: rgb(8, 65, 122);
+    border-width: 4px;
+    width:45%;
+   
+}
+
+.tlimage1:hover+.timelineDate,.tlimage2:hover+.timelineDate,.tlimage3:hover+.timelineDate,.tlimage4:hover+.timelineDate,.tlimage5:hover +.timelineDate{
+    color:white;
+}
+
+
+.timelineDate{
+    color:#db6600;
+    font-weight: bold;
+    background-color: rgb(227, 184, 42);
+    line-height: 2.5em;
+    margin-top: 15px;
+    transition: 0.5s ease;
+}
+
+/* overlay */
+.hidden {
+    visibility: hidden;
+    opacity:0;
+}
+
+.showing{
+    visibility: visible;
+    opacity: 1;
+}
+
+#overlay1,#overlay2,#overlay3,#overlay4,#overlay5{
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    z-index: 10;
+
+
+}
+
+.overlayContent{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width:80%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    background-color: rgb(8, 65, 122);
+    
+
+}
+
+
+.overlay p{
+    text-align: left;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    width:80%;
+    color:white;
+}
+
+.overlay h2{
+ font-size: 1em;
+ color:rgb(227, 184, 42);
+ margin:auto;
+ padding:20px;
+ width:80%;
+ text-align: left;
+}
+
+
+.overlayimg{
+    width: 80%;
+    display: block;
+    margin: auto;
+    border-radius: 25px;
+}
+
+
+.closeBtn{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border-style: none;
+    background-color:rgb(230, 230, 230);
+    color:rgb(8, 65, 122);
+    box-shadow: 0 4px 8px 0 rgba(1, 9, 26, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    transition: 0.5s ease;
+
+}
+
+.closeBtn:hover{
+    color:rgb(8, 65, 122);
+    background-color:rgb(248, 201, 53);
+}
+
+
+
+/* media */
+@media only screen and (min-width: 850px){
+
+/* header{
+    margin:auto;
+    margin-top: 20vh;
+} */
+
+main{
+    margin:auto;
+    margin-top: 5%;
+}
+
+.overlayimg{
+    width: 80%;
+}
+
+.overlayContent{
+    width:40%;
+    padding: 20px;
+}
+
+.closeBtn{
+    margin-right: 10%;
+    display: flex;
+}
+
+}

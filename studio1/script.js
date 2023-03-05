@@ -55,7 +55,7 @@
     document.querySelector('.close').addEventListener('click',function(event){
         event.preventDefault();
         document.getElementById('formOutput').className ='hidden';
-
+        
     });
 
 
