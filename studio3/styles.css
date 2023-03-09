@@ -1,0 +1,145 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+    line-height: 1.2em;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1200px;
+    width: 80%;
+    border: blue;
+    border-style: double;
+    border-width: 6px;
+}
+
+.winningNumber{
+    color: blue;
+    font-weight: bolder;
+}
+
+#instruction p{
+    width: 82%;
+    margin: 0;
+    padding: 10px;
+    
+}
+
+header{
+    width:95%;
+    margin: auto;
+}
+
+h1{
+    color:blue;
+    font-family: 'Climate Crisis', cursive;
+    letter-spacing: .1rem;
+    font-size: 45px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+button { 
+    padding: 10px;
+}
+
+div {
+    padding: 20px;
+}
+
+#gamecontrol {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+#gamecontrol h2{
+    font-size: 20px;
+}
+
+#game {
+
+    text-align: center;
+    margin: auto;
+    
+}
+
+#game p {
+    color:blue;
+    font-weight: bolder;
+}
+
+#game img{
+    padding-left:20px;
+    padding-right:20px;
+}
+#actions {
+    text-align: center;
+}
+
+#gamenactions{
+    width: 70%;
+    padding:0;
+}
+
+main{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width:100%;
+}
+#player1Score{
+justify-content: flex-start;
+}
+
+#player1Score, #player2Score{
+    margin:30px 30px 0px 30px;
+    padding: 0% 5%;
+}
+
+#player2Score{
+    justify-content: flex-end;
+}
+
+#player1Score h2, #player2Score h2{
+    color:blue;
+    font-family: 'Climate Crisis', cursive;
+    font-size: 70px;
+    text-align: center;
+}
+
+#player1Score p, #player2Score p{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+button{
+    background-color:white;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: solid 1px blue ;
+    color:blue;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+button:hover{
+    background-color: blue;
+    color:white;
+    border:blue;
+}
+
+#rollagain{
+   background-color: blue; 
+   color:white;
+}
+
+#winningCondition{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-top:50px;
+    color: blue;
+    
+}
