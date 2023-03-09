@@ -7,6 +7,10 @@
     const game = document.getElementById('game');
     const actionArea = document.getElementById('actions');
 
+    const rollBtn = document.getElementById('roll');
+    const quitBtn = document.getElementById('quit');
+    const blop = new Audio('sounds/blop.mp3');
+    const egg = new Audio ('sounds/egg.mp3');
 
     var gameData = {
         dice: ['die1.png','die2.png','die3.png','die4.png','die5.png','die6.png'],
@@ -16,7 +20,7 @@
         roll2: 0,
         rollSum: 0,
         index: 0,
-        gameEnd: 20 //set the winning number to 20
+        gameEnd: 19 //winning number: 20
     }
 
     const player1Score = document.getElementById('player1Score');
@@ -29,7 +33,9 @@
         gameControl.innerHTML = '<h2>The Game Has Started</h2>';
         gameControl.innerHTML += '<button id = "quit">Wanna Quit?</button>';
 
-        document.getElementById('quit').addEventListener("click", function(){location.reload()
+        document.getElementById('quit').addEventListener("click", function(){
+            location.reload()
+                blop.play();
         });
         setUpTurn();
     });
@@ -39,7 +45,10 @@
         actionArea.innerHTML = '<button id="roll"> Roll the Dice </button>';
         document.getElementById('roll').addEventListener('click', function(){
             throwDice();
-        });
+//clicking sound effect
+                blop.play();
+            });
+  
     }
 
     function throwDice(){
@@ -56,6 +65,7 @@
         if(gameData.rollSum === 2){
         game.innerHTML += '<p>Oh Snap! Snake eyes!</p>';
         gameData.score[gameData.index] = 0;
+
         //switch player
         gameData.index ? (gameData.index = 0): (gameData.index = 1);
         //Show the current score
@@ -88,7 +98,9 @@
 
     function checkWinningCondition(){
         if(gameData.score[gameData.index] > gameData.gameEnd){
-            player1Score.innerHTML = `<h3 id="winningCondition">${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h3>`;
+            //egg cracking sound
+            egg.play();
+            player2Score.innerHTML = `<h3 id="winningCondition">${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h3>`;
 
             actionArea.innerHTML = '';
             document.getElementById('quit').innerHTML = "Start a New Game?";
@@ -103,4 +115,5 @@
         player2Score.innerHTML = `<h2>${gameData.score[1]}</h2> <p>${gameData.players[1]}</p>`;
 
     };
+
 }())
