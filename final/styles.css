@@ -1,0 +1,39 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin:auto;
+    font-size: 16px;
+}
+
+header{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    margin:auto;
+    padding-left: 10%;
+}
+
+header h1{
+    border-bottom: solid blue;
+    width: 90%;
+    margin-bottom: 0;
+}
+
+article{
+    display: grid;
+    grid-template-columns: 1.4fr 1.6fr;
+    margin:auto;
+    width: 80%;
+    gap: 5%;
+    margin-bottom: 5%;
+    margin-top: 30px;
+}
+
+article h2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: blue;
+    line-height: 1em;
+}
+
+section {
+    margin:auto;
+}
