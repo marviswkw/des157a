@@ -81,14 +81,16 @@
         }else{
             gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
             actionArea.innerHTML = '<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>';
-
+            
             document.getElementById('rollagain').addEventListener('click', function (){
                 setUpTurn();
+                blop.play();
             });
 
             document.getElementById('pass').addEventListener('click',function(){
                 gameData.index ? (gameData.index = 0): (gameData.index = 1);
                 setUpTurn();
+                blop.play();
             });
             //check winning condition!
             checkWinningCondition();
