@@ -2,6 +2,9 @@
     'use strict';
     console.log('reading js');
 
+    window.onload = function() {
+      alert("Hello and welcome to the user testing!\n\nPlease complete the following three tasks: \n- Hover over the image to see if the hover interaction functioning well\n- Click on the image and make the overlay window shows up. \n- Close each overlay with the button");
+    };
     const lastSection = document.getElementById('lastSection');
     const timelineLine = document.querySelector('.timelineList:before');
 
