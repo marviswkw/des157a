@@ -1,10 +1,10 @@
-(function(){
+   window.addEventListener ('load', function () {
     'use strict';
     console.log('reading js');
 
-    window.onload = function() {
-      alert("Hello and welcome to the user testing!\n\nPlease complete the following three tasks: \n- Hover over the image to see if the hover interaction functioning well\n- Click on the image and make the overlay window shows up. \n- Close each overlay with the button");
-    };
+   //  window.onload = function() {
+   //    alert("Hello and welcome to the user testing!\n\nPlease complete the following three tasks: \n- Hover over the image to see if the hover interaction functioning well\n- Click on the image and make the overlay window shows up. \n- Close each overlay with the button");
+   //  };
     const lastSection = document.getElementById('lastSection');
     const timelineLine = document.querySelector('.timelineList:before');
 
@@ -28,30 +28,50 @@
     timelineImg1.addEventListener('click',function(event){
        event.preventDefault();
        overlay1.className = 'showing';
+       overlay2.className ="hidden";
+       overlay3.className ="hidden";
+       overlay4.className ="hidden";
+       overlay5.className ="hidden";
        body.style.backgroundImage = "url('images/bg2.png')";
     });
 
     timelineImg2.addEventListener('click',function(event){
         event.preventDefault();
         overlay2.className = 'showing';
+        overlay1.className ="hidden";
+        overlay3.className ="hidden";
+        overlay4.className ="hidden";
+        overlay5.className ="hidden";
         body.style.backgroundImage = "url('images/bg2.png')";
      });
      
      timelineImg3.addEventListener('click',function(event){
       event.preventDefault();
       overlay3.className = 'showing';
+      overlay1.className ="hidden";
+      overlay2.className ="hidden";
+      overlay4.className ="hidden";
+      overlay5.className ="hidden";
       body.style.backgroundImage = "url('images/bg2.png')";
    });
 
    timelineImg4.addEventListener('click',function(event){
       event.preventDefault();
       overlay4.className = 'showing';
+      overlay1.className ="hidden";
+      overlay2.className ="hidden";
+      overlay3.className ="hidden";
+      overlay5.className ="hidden";
       body.style.backgroundImage = "url('images/bg2.png')";
    });
 
    timelineImg5.addEventListener('click',function(event){
       event.preventDefault();
       overlay5.className = 'showing';
+      overlay1.className ="hidden";
+      overlay2.className ="hidden";
+      overlay3.className ="hidden";
+      overlay4.className ="hidden";
       body.style.backgroundImage = "url('images/bg2.png')";
    });
 
@@ -70,8 +90,4 @@
 
         });
       }
-
-   
-
-
 })();
