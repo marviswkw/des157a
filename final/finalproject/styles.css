@@ -85,6 +85,7 @@ header{
 .showing{
     visibility: visible;
     opacity: 1;
+    z-index: 10;
 }
 
 #overlay1,#overlay2,#overlay3,#overlay4,#overlay5{
